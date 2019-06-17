@@ -1,13 +1,15 @@
 import React from 'react';
-const Card = () => {
+const Card = (props) => {console.log(props);
     return ( 
     	<article className="card">
     		<header>
-    			<img className="thumbnail" src="https://www.wellnesspetfood.com/sites/default/files/styles/blog_feature/public/media/images/happy-cat-blog-cover.jpg" alt="Image can't be fetched"/>
-    			<h3 className="heading">The Mystery of the Happy Cat</h3>
+                {/*<img className="thumbnail" src="https://www.wellnesspetfood.com/sites/default/files/styles/blog_feature/public/media/images/happy-cat-blog-cover.jpg" alt="Image can't be fetched"/>*/}
+    			<img className="thumbnail" src={props.article.urlToImage} alt="Image can't be fetched"/>
+    			<h3 className="heading">{props.article.title}</h3>
+                <small className="source">By: {props.article.source.name}</small>
     		</header>
     		<section>
-    			<p>If you’re a cat parent, then you know cats are very good at keeping us guessing. Are they happy, annoyed, secretly plotting our demise? Maybe they’re just sleepy.</p>
+    			<p>{props.article.description}</p>
     		</section>
     		<footer>
     			<p>I am footer</p>
@@ -30,7 +32,7 @@ const Card = () => {
                 }
                 header>.thumbnail{
                     height: auto;
-                    max-width:100%;
+                    width:100%;
                     opacity: .95;
                     overflow: hidden;
                     transition: all .2s ease-in-out;
@@ -39,11 +41,19 @@ const Card = () => {
                 .card:hover header>.thumbnail {
                   opacity: 1;
                 }
-                header h3.heading, section, footer{
+                header h3.heading, header small.source, section, footer{
                     padding: 0px 10px;
+                }
+                header small.source{
+                    position: relative;
+                    top: -20px;
+                    font-weight: 700;
                 }
                 section{
                     min-height: 150px;
+                }
+                section>p{
+                    margin-top:0px;
                 }
                 footer{
                     border-top: 1px solid #eee;;
