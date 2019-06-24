@@ -4,6 +4,7 @@ import Nav from '../Nav/Nav'
 import Card from '../Card/Card'
 import Buffer from './Buffer'
 import NoNetworkFound from '../NoNetworkFound/NoNetworkFound'
+import FoodBox from "../FoodBox/FoodBox"
 console.log("got buffer ",Buffer);
 
 class App extends Component{
@@ -67,6 +68,7 @@ class App extends Component{
         {this.state.buffer.articles.map((o,i) => {
           return <Card  key={i} article={o}/>
         })}
+        <FoodBox/>
       </div>
     );
   }
