@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Buffer =  {
     "status": "ok",
     "totalResults": 70,
@@ -267,4 +265,4 @@ const Buffer =  {
     ]
 }
 
-export default Buffer    
+export default Buffer

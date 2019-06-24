@@ -1,12 +1,12 @@
 import React from 'react';
 const Card = (props) => {console.log(props);
-    return ( 
+    return (
     	<article className="card">
     		<header>
-                {/*<img className="thumbnail" src="https://www.wellnesspetfood.com/sites/default/files/styles/blog_feature/public/media/images/happy-cat-blog-cover.jpg" alt="Image can't be fetched"/>*/}
+          {/*<img className="thumbnail" src="https://www.wellnesspetfood.com/sites/default/files/styles/blog_feature/public/media/images/happy-cat-blog-cover.jpg" alt="Image can't be fetched"/>*/}
     			<img className="thumbnail" src={props.article.urlToImage} alt="Image can't be fetched"/>
     			<h3 className="heading">{props.article.title}</h3>
-                <small className="source">By: {props.article.source.name}</small>
+          <small className="source">By: {props.article.source.name}</small>
     		</header>
     		<section>
     			<p>{props.article.description}</p>
@@ -30,32 +30,32 @@ const Card = (props) => {console.log(props);
                     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
                     margin-bottom: 25px;
                 }
-                header>.thumbnail{
+                .card header>.thumbnail{
                     height: auto;
                     width:100%;
                     opacity: .95;
                     overflow: hidden;
                     transition: all .2s ease-in-out;
                 }
-                header>.thumbnail:hover,
+                .card header>.thumbnail:hover,
                 .card:hover header>.thumbnail {
                   opacity: 1;
                 }
-                header h3.heading, header small.source, section, footer{
+                .card header h3.heading, header small.source, section, footer{
                     padding: 0px 10px;
                 }
-                header small.source{
+                .card header small.source{
                     position: relative;
                     top: -20px;
                     font-weight: 700;
                 }
-                section{
+                .card section{
                     min-height: 150px;
                 }
-                section>p{
+                .card section>p{
                     margin-top:0px;
                 }
-                footer{
+                .card footer{
                     border-top: 1px solid #eee;;
                 }
             `}
