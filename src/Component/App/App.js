@@ -7,34 +7,63 @@ import NoNetworkFound from '../NoNetworkFound/NoNetworkFound'
 console.log("got buffer ",Buffer);
 
 class App extends Component{
-  state = {
-    "buffer": Buffer,
-    "updateCounter":0
+  constructor(){
+    super();
+    // this.refreshData();
+    this.state = {
+      "buffer": Buffer,
+      "updateCounter":0,
+      "offline": this.handleCheckOnline()
+    }
+    this.service.fetchPost("");
   }
   componentDidMount(){
-     console.log("componentDidMount");
-     console.log(this.state);
       window.addEventListener('scroll', this.handleScroll);
   }
   componentWillUnmount(){
       window.removeEventListener('scroll', this.handleScroll);
   }
+  handleCheckOnline = () => window.navigator.onLine
   handleScroll = (event) =>{
-    // console.log(Buffer);
     if(!window.scrollY){
-      //logic for refresh app later
       this.setState({
-        updateCounter:this.state.updateCounter +1
+        "updateCounter":this.state.updateCounter +1,
+        "offline": this.handleCheckOnline()
       });
     }
-    console.log(this.state)
+  }
+  service = {
+    "fetchPost":(config)=>{
+      // return Buffer;
+      fetch('https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=d518623f4ffd44aabfb7fbc701457dcc')
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        console.log((data));
+      });
+    }
+  }
+  refreshData = () => {
+    return "I am ankush"
+    // @DOC
+    const Sources = [{
+      url:"news.api.com",
+      method:"GET",
+      body:{},
+    },{
+      url:"onlineWetherMap.com",
+      method:"GET",
+      body:{}
+    }];
+
   }
   render(){
     return(
       <div className="App">
         <h1>Hitme.com {this.state.updateCounter}</h1>
         <Nav/>
-        <NoNetworkFound/>
+        {this.state.offline?null:<NoNetworkFound/>}
         {this.state.buffer.articles.map((o,i) => {
           return <Card  key={i} article={o}/>
         })}
