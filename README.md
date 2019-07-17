@@ -68,14 +68,16 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
-#DOCS
+### DOCS
 - React component lifecycle guide https://busypeoples.github.io/post/react-component-lifecycle/
-#TASK - Phase 1
+
+### TASK - Phase 1
 - No network found tile responsive - done
 - React work flow for adding multiple API's and making a common JSON filter for all API's. - In progress
 - lazy loading
 - service worker for offline concept
-#TASK - Phase 2
+
+### TASK - Phase 2
 - Go inside the detail page of tile
 - No network found for detail page
 - React routing and workflow, making common JSON architecture
