@@ -1,0 +1,16 @@
+.network-board{
+  padding:0px 5px;
+}
+.card-no-nework-found{
+  max-width:800px;
+  margin:10px auto;
+  text-align:left;
+  background:#FFF;
+  display: block;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,.15), 0 4px 6px rgba(0,0,0,0.23);
+  position: relative;
+  transition: all .2s ease-in-out;
+}
+.card-no-nework-found header h3.heading, header small.sourc, section, footer {
+    padding: 0px 10px;
+}
