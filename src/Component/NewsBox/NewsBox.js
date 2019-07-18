@@ -17,10 +17,17 @@ class NewsBox extends React.Component{
   //   console.log("inside getDerivedStateFromProps always call before render method", nextProps, state)
   //   return { "updateCounter": nextProps.data }
   // }
-  componentWillMount(){
-    // console.log("inside willMount, called first time only before render")
-    console.log("=============================================================")
-    this.methods.engine("play")
+  // componentWillMount(){
+  //   // console.log("inside willMount, called first time only before render")
+  //   console.log("=============================================================")
+  //   this.methods.engine("play",this.state)
+  // }
+  componentDidMount(){
+    console.log("inside componentDidMount, called first time only after render")
+    this.methods.engine("play",this.state)
+  }
+  componentWillUnmount(){
+    // console.log("inside willUnMount, called when component expires")
   }
   // componentWillReceiveProps(nextProps) {
   //   console.log("inside will receive props, will call when props changes, will not work if getDerivedStateFromProps method used",this.props, nextProps)
@@ -39,7 +46,12 @@ class NewsBox extends React.Component{
     console.log("current nextState = ", nextState)
     console.log("=============================================================")
 
-    if(!nextProps.updateCounter || nextProps.updateCounter!=this.props.updateCounter){
+    if(nextProps.updateCounter!=this.props.updateCounter){
+        //update happens
+        this.methods.updateHappens(nextProps,nextState);
+        return false
+    }else if(!nextProps.updateCounter || nextProps.updateCounter==this.props.updateCounter){
+        //for first update happen as well as if props are same
         return true
     }
     return false
@@ -50,12 +62,6 @@ class NewsBox extends React.Component{
   //     // this.methods.updateState("updateCounter",this.props.updateCounter)
   //   }
   // }
-  componentDidMount(){
-    // console.log("inside didmount, called first time only after render")
-  }
-  componentWillUnmount(){
-    // console.log("inside willUnMount, called when component expires")
-  }
   Source = {
     "newsapi":{
       "url":"https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=d518623f4ffd44aabfb7fbc701457dcc",
@@ -84,21 +90,32 @@ class NewsBox extends React.Component{
     }
   }
   methods = {
-    "engine":(plug)=>{
+    "engine":(plug,data)=>{
       this.methods.getData().then((result)=>{
         // this.setState({"buffer":result})
-        this.methods.updateState("buffer",result);
+        data.buffer = result;
+        this.methods.updateState("",data);
       });
     },
-    "getData":()=>{
+    "getData":(config)=>{
       return this.service.fetchPost({type:"newsapi"}).then( result => {
         return result;
       });
     },
+    "updateHappens":(nextProps,nextState)=>{
+      let obj = new Object()
+      obj.updateCounter = nextProps.updateCounter
+      obj.buffer = {}
+      this.methods.engine("play",obj)
+    },
     "updateState":(key,data)=>{
-      let obj = {}
-      obj[key] = data
-      this.setState(obj)
+      if(!key){
+        this.setState(data)
+      }else{
+        let obj = {}
+        obj[key] = data
+        this.setState(obj)
+      }
     }
   }
   //render
