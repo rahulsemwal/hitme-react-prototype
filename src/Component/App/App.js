@@ -35,7 +35,7 @@ class App extends Component{
         <Nav/>
         {this.state.offline?null:<NoNetworkFound/>}
         <NewsBox updateCounter = {this.state.updateCounter}/>
-        <FoodBox/>
+        {/*<FoodBox/>*/}
       </div>
     );
   }

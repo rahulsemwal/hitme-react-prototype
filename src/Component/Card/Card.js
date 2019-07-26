@@ -5,7 +5,7 @@ const Card = (props) => {
     return (
     	<article className="card">
     		<header>
-    			<img className="thumbnail" src={props.article.urlToImage} alt="Image can't be fetched"/>
+    			<img className="thumbnail" src={props.article.urlToImage} alt="Not Available"/>
     			<h3 className="heading">{props.article.title}</h3>
           <small className="source">By: {props.article.source.name}</small>
     		</header>

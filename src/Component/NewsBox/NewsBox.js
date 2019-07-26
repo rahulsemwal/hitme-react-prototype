@@ -3,11 +3,13 @@
 @React 16.8 - componentWillMount, componentWillReceiveProps, componentWillUpdate must not use if you are using "static getDerivedStateFromProps"
 */
 import React from 'react'
+import ApiProvider from '../../Service/ApiProvider'
 import Card from '../Card/Card'
 import "./NewsBox.css"
 class NewsBox extends React.Component{
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
+    this.apiProvider = new ApiProvider()
     this.state = {
       "buffer": {"articles":[]},
       "updateCounter":0,
@@ -46,11 +48,11 @@ class NewsBox extends React.Component{
     console.log("current nextState = ", nextState)
     console.log("=============================================================")
 
-    if(nextProps.updateCounter!=this.props.updateCounter){
+    if(nextProps.updateCounter!==this.props.updateCounter){
         //update happens
         this.methods.updateHappens(nextProps,nextState);
         return false
-    }else if(!nextProps.updateCounter || nextProps.updateCounter==this.props.updateCounter){
+    }else if(!nextProps.updateCounter || nextProps.updateCounter===this.props.updateCounter){
         //for first update happen as well as if props are same
         return true
     }
@@ -62,48 +64,32 @@ class NewsBox extends React.Component{
   //     // this.methods.updateState("updateCounter",this.props.updateCounter)
   //   }
   // }
-  Source = {
-    "newsapi":{
-      "url":"https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=d518623f4ffd44aabfb7fbc701457dcc",
-      "method": "GET",
-      "body":{},
-      "Content-Type":"JSON"
-    }
-  }
   service = {
     "fetchPost":(config)=>{
       // return Buffer;
-      return fetch(this.Source[config.type].url)
-      .then(function(response) {
-        return response.json()
+      //retuning a promise
+      let o = this.apiProvider
+      return o.get(config).then((res) => {
+        return res
       })
-      .then(function(data) {
-        return data
-      })
-      .catch(function(err){
-        const error = {
-          "error":err
-        }
-        console.log("Error in network call", err);
-        return error
-      });
     }
   }
   methods = {
     "engine":(plug,data)=>{
-      this.methods.getData().then((result)=>{
+      let config = {type:"newsApi"}
+      this.methods.getData(config).then((result)=>{
         // this.setState({"buffer":result})
         data.buffer = result;
         this.methods.updateState("",data);
       });
     },
     "getData":(config)=>{
-      return this.service.fetchPost({type:"newsapi"}).then( result => {
+      return this.service.fetchPost(config).then(result => {
         return result;
       });
     },
     "updateHappens":(nextProps,nextState)=>{
-      let obj = new Object()
+      let obj = {}
       obj.updateCounter = nextProps.updateCounter
       obj.buffer = {}
       this.methods.engine("play",obj)

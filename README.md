@@ -73,7 +73,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 ### TASK - Phase 1
 - No network found tile responsive - done
-- React work flow for adding multiple API's and making a common JSON filter for all API's. - In progress
+- React work flow for adding multiple API's and making a common JSON filter for all API's. - Almost Done
 - lazy loading
 - service worker for offline concept
 
