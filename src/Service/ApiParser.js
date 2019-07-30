@@ -19,8 +19,8 @@ export default class ApiParser{
   }
   //newsApi response parser
   newsApiResponseParser(data){
-    let pipe = {"articles":[]}
-    data.articles.forEach((o,i)=>{
+    let pipe = {...data}
+    pipe.articles = data.articles.map(function(o,i){
       let capsule = {}
       capsule.source = o.source.name
       capsule.author = (o.author==null)?"Anonymous":o.author
@@ -30,8 +30,9 @@ export default class ApiParser{
       capsule.urlToImage = o.urlToImage
       capsule.publishedAt = o.publishedAt
       capsule.content = o.content
-      pipe.articles.push(capsule)
+      return capsule
     })
+    console.log(pipe)
     return pipe;
   }
 }

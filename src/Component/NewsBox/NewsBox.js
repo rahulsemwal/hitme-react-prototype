@@ -76,7 +76,9 @@ class NewsBox extends React.Component{
   }
   methods = {
     "engine":(plug,data)=>{
-      let config = {type:"newsApi"}
+      let config = {}
+      config = {type:"newsApi"}
+      // config = {type:"newsApiEntertainment"}
       this.methods.getData(config).then((result)=>{
         // this.setState({"buffer":result})
         data.buffer = result;

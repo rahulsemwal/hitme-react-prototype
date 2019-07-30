@@ -83,3 +83,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 - React routing and workflow, making common JSON architecture
 - lazy loading for
 - Service worker if need, less priority
+
+### TASK - Phase 3
+- Making Brain Class 

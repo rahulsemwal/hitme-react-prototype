@@ -16,5 +16,19 @@ const Sources = [{
   "maxHitLimit":"450",
   "reqParser":"newsApiRequestParser",
   "resParser":"newsApiResponseParser"
+},{
+  "type":"newsApiEntertainment",
+  "@Docs":"",
+  "domain":"https://newsapi.org",
+  "format":"https://newsapi.org/v2/{*permalink}?{parameters added with & operators}&apiKey={*Generated apiKey}",
+  "permalink":["top-headlines","everything"],
+  "parameters":[{"country":[]},{"category":["business","entertainment"]},{"sources":[]},{"apiKey":["d518623f4ffd44aabfb7fbc701457dcc"]}],
+  "apiKey":"d518623f4ffd44aabfb7fbc701457dcc",
+  "url":"https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=d518623f4ffd44aabfb7fbc701457dcc",
+  "method":"GET",
+  "body":null,
+  "maxHitLimit":"450",
+  "reqParser":"newsApiRequestParser",
+  "resParser":"newsApiResponseParser"
 }]
 export default Sources
