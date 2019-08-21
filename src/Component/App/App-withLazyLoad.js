@@ -1,10 +1,10 @@
-import React , {Component} from 'react'
+import React , {Component, lazy, Suspense} from 'react'
 import './App.css'
 import Nav from '../Nav/Nav'
 import NoNetworkFound from '../NoNetworkFound/NoNetworkFound'
-import NewsBox from '../NewsBox/NewsBox'
-// import FoodBox from "../FoodBox/FoodBox"
-
+//import NewsBox from '../NewsBox/NewsBox'
+import FoodBox from "../FoodBox/FoodBox"
+const NewsBox = lazy(() => import('../NewsBox/NewsBox'))
 class App extends Component{
   constructor(){
     super();
@@ -34,7 +34,7 @@ class App extends Component{
         <h1>Hitme.com {this.state.updateCounter}</h1>
         <Nav/>
         {this.state.offline?null:<NoNetworkFound/>}
-        <NewsBox updateCounter = {this.state.updateCounter}/>
+        <Suspense fallback={<div>Loading...</div>}><NewsBox updateCounter = {this.state.updateCounter}/></Suspense>
         {/*<FoodBox/>*/}
       </div>
     );
