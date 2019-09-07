@@ -98,6 +98,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 - History API
 
 ### TASK - Phase 3
+-google data scrap - https://gist.github.com/erogol/6658881
 -Integrating python to it
 -https://medium.com/@pranayaryal/how-to-run-flask-and-react-together-6e7c773b54d
 - Making Brain Class
