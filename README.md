@@ -1,5 +1,5 @@
 ## hitme-react-prototype
-Basic prototype for understanding react from scratch.
+Basic prototype React app for showing live news. Currently created a genric mobile first web app to show news with the help of thrird party api's and data scrapping techniques.
 
 ## Available Scripts
 
