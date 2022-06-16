@@ -10,7 +10,7 @@ const Sources = [{
   "permalink":["top-headlines","everything"],
   "parameters":["country","category","sources","apiKey", "it may be object in future"],
   "apiKey":"c438f5b301e94324a9c5609062fe4b73",
-  "url":"https://newsapi.org/v2/everything?q=tesla&from=2022-05-16&sortBy=publishedAt&apiKey=c438f5b301e94324a9c5609062fe4b73git stat",
+  "url":"/newsapi",
   "method":"GET",
   "body":null,
   "maxHitLimit":"450",

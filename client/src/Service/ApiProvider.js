@@ -20,6 +20,13 @@ class ApiProvider extends ApiParser{
     //PARSE RESPONSE AS PER THE GIVEN PARSER RULE IN collection
     //RETURN PARSED DATA TO COMPONENTS
     return this.asyncGetCall(this.collection).then((res)=>{
+      if(typeof res == 'string'){
+        try{
+          res = JSON.parse(res);
+        }catch{
+          res = {};
+        }
+      }
       return this[this.collection.resParser](res)
     })
   }
