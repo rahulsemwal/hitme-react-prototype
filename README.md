@@ -1,6 +1,40 @@
 ## hitme-react-prototype
 Basic prototype React app for showing live news. Currently created a genric mobile first web app to show news with the help of thrird party api's and data scrapping techniques.
 
+### DOCS
+- React component lifecycle guide https://busypeoples.github.io/post/react-component-lifecycle/
+- Google self library for building web UI - https://developers.google.com/closure/library/docs/
+- Lazy loading concept
+-- https://medium.com/@filipvitas/lazy-load-images-with-zero-javascript-2c5bcb691274,
+-- https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video/
+-- https://jmperezperez.com/high-performance-lazy-loading/
+- Lazy loading and code splitting
+-- https://blog.bitsrc.io/improve-react-performance-using-lazy-loading-and-suspense-933903171954
+- History API and SEO with lazy load
+--https://love2dev.com/blog/google-lazy-load-seo/
+
+### TASK - Phase 1
+- No network found tile responsive - done
+- React work flow for adding multiple API's and making a common JSON filter for all API's. - Almost Done
+- lazy loading
+- service worker for offline concept
+- History API - https://love2dev.com/blog/google-lazy-load-seo/
+
+### TASK - Phase 2
+- Go inside the detail page of tile
+- No network found for detail page
+- React routing and workflow, making common JSON architecture
+- lazy loading and code splitting
+- Code Splitting - react lazy load components
+- Service worker if need, less priority
+- History API
+
+### TASK - Phase 3
+-google data scrap - https://gist.github.com/erogol/6658881
+-Integrating python to it
+-https://medium.com/@pranayaryal/how-to-run-flask-and-react-together-6e7c773b54d
+- Making Brain Class
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -67,39 +101,3 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
-### DOCS
-- React component lifecycle guide https://busypeoples.github.io/post/react-component-lifecycle/
-- Google self library for building web UI - https://developers.google.com/closure/library/docs/
-- Lazy loading concept
--- https://medium.com/@filipvitas/lazy-load-images-with-zero-javascript-2c5bcb691274,
--- https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video/
--- https://jmperezperez.com/high-performance-lazy-loading/
-- Lazy loading and code splitting
--- https://blog.bitsrc.io/improve-react-performance-using-lazy-loading-and-suspense-933903171954
-- History API and SEO with lazy load
---https://love2dev.com/blog/google-lazy-load-seo/
-
-
-### TASK - Phase 1
-- No network found tile responsive - done
-- React work flow for adding multiple API's and making a common JSON filter for all API's. - Almost Done
-- lazy loading
-- service worker for offline concept
-- History API - https://love2dev.com/blog/google-lazy-load-seo/
-
-### TASK - Phase 2
-- Go inside the detail page of tile
-- No network found for detail page
-- React routing and workflow, making common JSON architecture
-- lazy loading and code splitting
-- Code Splitting - react lazy load components
-- Service worker if need, less priority
-- History API
-
-### TASK - Phase 3
--google data scrap - https://gist.github.com/erogol/6658881
--Integrating python to it
--https://medium.com/@pranayaryal/how-to-run-flask-and-react-together-6e7c773b54d
-- Making Brain Class
--
