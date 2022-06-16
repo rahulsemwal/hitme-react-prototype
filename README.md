@@ -35,7 +35,7 @@ Basic prototype React app for showing live news. Currently created a genric mobi
 -https://medium.com/@pranayaryal/how-to-run-flask-and-react-together-6e7c773b54d
 - Making Brain Class
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 
