@@ -30,9 +30,9 @@ Basic prototype React app for showing live news. Currently created a genric mobi
 - History API
 
 ### TASK - Phase 3
--google data scrap - https://gist.github.com/erogol/6658881
--Integrating python to it
--https://medium.com/@pranayaryal/how-to-run-flask-and-react-together-6e7c773b54d
+- google data scrap - https://gist.github.com/erogol/6658881
+- Integrating python to it
+- https://medium.com/@pranayaryal/how-to-run-flask-and-react-together-6e7c773b54d
 - Making Brain Class
 
 ### Available Scripts
