@@ -28,6 +28,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:3001",
-  "homepage" : "http://hitme.github.io/myapp"
+  "proxy": "http://localhost:3001"
 }
