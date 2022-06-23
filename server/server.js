@@ -2,7 +2,7 @@ const path = require('path');
 
 const express = require("express");
 
-// const serverless = require('serverless-http');
+const serverless = require('serverless-http');
 
 const server = express();
 
@@ -47,4 +47,4 @@ server.use(express.static(path.join(__dirname, '../client/build')));
 // server.use('*', (req, res) => res.sendFile(path.join(__dirname, '../client/build','index.html')));
 
 module.exports = server;
-// module.exports.handler = serverless(server);
+module.exports.handler = serverless(server);
