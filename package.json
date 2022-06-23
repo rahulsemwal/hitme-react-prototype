@@ -4,9 +4,8 @@
   "description": "server for hosting apis",
   "main": "server/server.js",
   "scripts": {
-    "test": "node server/server.js",
-    "start": "node server/server.js",
-    "build": "cd client && npm install && npm run build"
+    "start": "node server/server-local.js",
+    "build": "./node_modules/.bin/netlify-lambda build server && cd client && npm install && npm run build"
   },
   "repository": {
     "type": "git",
@@ -20,6 +19,8 @@
   "homepage": "https://github.com/rahulsemwal/hitme-react-prototype#readme",
   "dependencies": {
     "axios": "^0.27.2",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "netlify-lambda": "^2.0.15",
+    "serverless-http": "^3.0.1"
   }
 }
