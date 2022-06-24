@@ -2,8 +2,8 @@
   command = "npm install && npm run build"
   functions = "functions/"
 [redirects]
-  from = "/api"
-  to = "/.netlify/functions/server"
+  from = "/.netlify/functions/server"
+  to = "/api"
   status = 200
   force = true # COMMENT: ensure that we always redirect
   headers = {X-From = "Netlify"}
