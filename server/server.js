@@ -6,7 +6,7 @@ const serverless = require('serverless-http');
 
 const server = express();
 
-// const router = express.Router();
+const router = express.Router();
 
 const axios = require('axios');
 
@@ -33,7 +33,7 @@ server.get("/newsapi", (req, res) => {
 // server.get('*', (req, res) => {
 //   res.sendFile(path.join(__dirname, '../client', 'index.html'));
 // });
-server.use(express.static(path.join(__dirname, '../client/build')));
+// server.use(express.static(path.join(__dirname, '../client/build')));
 // router.get('/', (req, res) => {
 //   res.writeHead(200, { 'Content-Type': 'text/html' });
 //   res.write('<h1>Hello from Express.js!</h1>');

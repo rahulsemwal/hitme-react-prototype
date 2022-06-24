@@ -5,7 +5,7 @@
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server-local.js",
-    "build": "./node_modules/.bin/netlify-lambda build server && cd client && npm install && npm run build"
+    "build": "./node_modules/.bin/netlify-lambda build server"
   },
   "repository": {
     "type": "git",
