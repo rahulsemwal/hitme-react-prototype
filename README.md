@@ -18,7 +18,7 @@ Basic prototype React app with express server for showing live news. Currently c
   - [ ] No network found for detail page
   - [ ] React routing and common JSON architecture
      
-### DOCS and Reference
+# DOCS and Reference
 - React component lifecycle guide https://busypeoples.github.io/post/react-component-lifecycle/
 - Google self library for building web UI - https://developers.google.com/closure/library/docs/
 - Lazy loading concept
