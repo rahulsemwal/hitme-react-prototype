@@ -13,7 +13,7 @@ class ApiProvider extends ApiParser{
       //default
       collection = API(this.collection)
     }
-    this.collection = collection
+    this.collection = collection;
     console.log("current collection ", this.collection)
     //Actual api call with fetch api, return promise
     //CALLING API BY FETCH AS STORED IN COLLECTION

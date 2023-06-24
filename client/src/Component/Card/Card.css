@@ -42,5 +42,15 @@
     margin-top:0px;
 }
 .card footer{
-    border-top: 1px solid #eee;;
+    border-top: 1px solid #eee;
+    text-align: right;
 }
+.card footer .like-button {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 15px 0px;
+  }
+.card footer .like-button.liked>svg{
+    fill:black;
+}  
