@@ -3,7 +3,7 @@ Basic prototype React app with express server for showing live news. Currently c
 
 # Tasks
 - [x] No network found tile responsive - [DONE]
-- [x] React work flow for adding multiple API's and create parser to generate a common format JSON from all API's. [DONE]
+- [x] React work flow for adding multiple API's and create parser to generate a common JSON format from all API's. [DONE]
 - [x] Creating Node express server for handling APIs, rest in doc/doc.js [Done]
 - [x] server - folder created for express server related stuff
   - [ ] Build Cache module to rate limit the thirdParty (newsApi) - `[In Progress]` 
