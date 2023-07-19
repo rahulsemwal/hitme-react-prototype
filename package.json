@@ -6,8 +6,9 @@
   "scripts": {
     "test": "node server/server.js",
     "start": "node server/server.js",
-    "build": "npm run buildClient && node server/server.js",
-    "buildClient": "cd client && npm install && npm run build"
+    "build": "npm run buildClient && npm run buildServer",
+    "buildClient": "cd client && npm install && npm run build",
+    "buildServer": "npm install"
   },
   "repository": {
     "type": "git",

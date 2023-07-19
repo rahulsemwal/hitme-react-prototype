@@ -36,7 +36,7 @@
     font-weight: 700;
 }
 .card section{
-    min-height: 150px;
+    /* min-height: 150px; */
 }
 .card section>p{
     margin-top:0px;
