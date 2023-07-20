@@ -18,8 +18,8 @@ Basic prototype React app with express server for showing live news. Currently c
   - [ ] No network found for detail page
   - [ ] React routing and common JSON architecture
 - [ ] Features to be introduced [In Research]
-  - [ ] Server: DB + AI based backend + free APIs + Scrapping + microservice + Search
-  - [ ] Client: like/share button + PWA + search + detail page addons app architecture        
+  - [ ] Server: DB + AI based backend + Free APIs + Scrapping + Microservice + Search
+  - [ ] Client: Like/Share button + PWA + Search + Detail page + Addons App Architecture(todo, Notes, games, AI photo formation, Reminders, notification, bots)        
      
 # DOCS and Reference
 - React component lifecycle guide https://busypeoples.github.io/post/react-component-lifecycle/
