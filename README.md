@@ -1,6 +1,9 @@
 ## hitme-react-prototype
 Basic prototype React app with express server for showing live news. Currently created as a genric mobile first web app to show news with the help of thrird party apis and data scrapping techniques.
 
+## Demo
+https://hitme.onrender.com/
+
 # Tasks
 - [x] No network found tile responsive - [DONE]
 - [x] React work flow for adding multiple API's and create parser to generate a common JSON format from all API's. [DONE]
