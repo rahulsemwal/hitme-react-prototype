@@ -1,10 +1,10 @@
-## hitme-react-prototype
+# hitme-react-prototype
 Basic prototype React app with express server for showing live news. Currently created as a genric mobile first web app to show news with the help of thrird party apis and data scrapping techniques.
 
 ## Demo
 https://hitme.onrender.com/
 
-# Tasks
+## Tasks
 - [x] No network found tile responsive - [DONE]
 - [x] React work flow for adding multiple API's and create parser to generate a common JSON format from all API's. [DONE]
 - [x] Creating Node express server for handling APIs, rest in doc/doc.js [Done]
@@ -24,7 +24,7 @@ https://hitme.onrender.com/
   - [ ] Server: DB + AI based backend + Free APIs + Scrapping + Microservice + Search
   - [ ] Client: Like/Share button + PWA + Search + Detail page + Addons App Architecture(todo, Notes, games, AI photo formation, Reminders, notification, bots)        
      
-# DOCS and Reference
+## DOCS and Reference
 - React component lifecycle guide https://busypeoples.github.io/post/react-component-lifecycle/
 - Google self library for building web UI - https://developers.google.com/closure/library/docs/
 - Lazy loading concept
