@@ -24,21 +24,23 @@ app.get("/newsapi", (req, res) => {
   */
 
   /*start Cache and Mock check*/
-  if(Cache.newsRes.cache){
+  if(Cache.active){
+    console.info("server:::cache fetched; Cache.active=", Cache.active)
     return res.json(Cache.newsRes);
   }
   /*End Cache and Mock check*/
   
   const config = {};
+  //Api key provided by @newsapi.org
+  config.apiKey = "c438f5b301e94324a9c5609062fe4b73";
   //[0 data coming on 2023-03] config.url = "https://newsapi.org/v2/everything?q=tesla&from=2023-03-18&sortBy=publishedAt&apiKey=c438f5b301e94324a9c5609062fe4b73";
   // [for US]config.url = 'https://newsapi.org/v2/top-headlines?' + 'country=us&' + 'apiKey=c438f5b301e94324a9c5609062fe4b73';
-  config.url = 'https://newsapi.org/v2/top-headlines?' + 'country=in&' + 'apiKey=c438f5b301e94324a9c5609062fe4b73';
+  config.url = 'https://newsapi.org/v2/top-headlines?' + 'country=us&' + 'apiKey=' + config.apiKey;
   // var req = new Request(url);
-  config.apiKey = "c438f5b301e94324a9c5609062fe4b73";
   axios.get(config.url).then((response) => {
-    console.log(response);
+    console.info("server::news feed fetched; response=", response);
     //Maintaining Cache with some time interval, make it empty [] once timer expires
-    Cache.newsRes = response.data;
+    Cache._create(response.data);
     res.json(response.data);
   }).catch(e => {
     console.log("Error: ", e);
