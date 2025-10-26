@@ -4,6 +4,12 @@ Basic News App empowered with React and Node express server to show live news. C
 ## Demo
 https://hitme.onrender.com/
 
+## Local setup
+- Go to project root folder and open it in terminal
+- Run following command first to build react and nodejs project `npm run build`
+- Run following command to start server `npm run start`
+- Go to browser and access website on `http://localhost:3001/`
+
 ## Tasks
 - [x] No network found tile responsive - [DONE]
 - [x] React work flow for adding multiple API's and create parser to generate a common JSON format from all API's. [DONE]
